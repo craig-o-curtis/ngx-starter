@@ -1,0 +1,37 @@
+
+<div class="fixed-action-btn toolbar" color="warn">
+  <a class="btn-floating btn-large waves-effect waves mdl-color--blue-800"
+    [ngClass]="{'pulse': showPulse}">
+    <i class="large material-icons">more_horiz</i>
+  </a>
+  <ul class="animated mdl-color-text--white">
+    <!-- Save-->
+    <li class="waves-effect waves mdl-color--grey-900" fxLayout="row" fxLayoutAlign="center center">
+      <div fxLayout="row" fxLayoutAlign="center center" class="animated fadeIn">
+        <md-icon class="mr-1">cancel</md-icon>
+        <span class="ml-1">Cancel</span>
+      </div>
+    </li>
+    <!-- Save-->
+    <li class="waves-effect waves mdl-color--blue-900" fxLayout="row" fxLayoutAlign="center center">
+      <div fxLayout="row" fxLayoutAlign="center center" class="animated fadeIn">
+        <md-icon class="mr-1">refresh</md-icon>
+        <span class="ml-1">Refresh</span>
+      </div>
+    </li>
+    <!-- Deleve-->
+    <li class="waves-effect waves mdl-color--grey-800" fxLayout="row" fxLayoutAlign="center center">
+      <div fxLayout="row" fxLayoutAlign="center center" class="animated fadeIn">
+        <md-icon class="mr-1">delete</md-icon>
+        <span class="ml-1">Delete</span>
+      </div>
+    </li>
+    <!-- Save-->
+    <li class="waves-effect waves" fxLayout="row" fxLayoutAlign="center center" (click)="save()">
+      <div fxLayout="row" fxLayoutAlign="center center" class="animated fadeIn">
+        <md-icon class="mr-1">save</md-icon>
+        <span class="ml-1">Save</span>
+      </div>
+    </li>
+  </ul>
+</div>

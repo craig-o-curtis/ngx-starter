@@ -1,0 +1,9 @@
+// Tweak of font sizes, more granulary
+
+// fontsize-5
+$count: 10;
+@for $i from 0 through $count * 4 {
+  .fontsize-#{ floor($i / 4) }#{ nth(null -1q -half -3q, $i % 4 + 1) } {
+    font-size: $i / 4 * 1rem;
+  }
+}

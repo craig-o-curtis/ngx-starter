@@ -1,0 +1,15 @@
+// override styles of radios, since styled to accent instead of primary
+/deep/ .mat-radio-outer-circle {
+.mat-radio-checked & {
+      border-color: $mdl-blue-grey;
+    }
+}
+
+/deep/ .mat-radio-inner-circle {
+    background-color: $mdl-blue;
+}
+
+/deep/ .mat-radio-ripple .mat-ripple-element {
+    background-color: $mdl-blue;
+    opacity: 0.25;
+}

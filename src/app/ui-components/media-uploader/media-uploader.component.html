@@ -1,0 +1,136 @@
+<form fxLayout="row" fxLayoutNoWrap fxLayoutAlign="space-between stretch"
+  class="mdl-color--blue-grey-900 p-1 h-lock-9"
+  novalidate>
+    <!-- Left Controls-->
+    <aside class="w-6 controlLeft"
+      fxLayout="column" fxLayoutWrap fxLayoutAlign="center center"
+      [ngSwitch]="leftControl">
+
+      <!-- Duplication due to init -->
+      <div *ngSwitchDefault
+        fxLayout="column" fxLayoutAlign="space-around center"
+        class="animated fadeIn">
+        <button md-fab
+          (click)="switchLeftControl('error')">
+          <md-icon>add</md-icon>
+        </button>
+        <p class="mt-3 mb-0 mdl-color-text--white">Add media</p>
+      </div>
+      <!-- Add Media-->
+      <div *ngSwitchCase="'add'"
+        fxLayout="column" fxLayoutAlign="space-around center"
+        class="animated fadeIn">
+        <button md-fab
+          (click)="chooseMedia()">
+          <md-icon>add</md-icon>
+        </button>
+        <p class="mt-3 mb-0 mdl-color-text--white">Add media</p>
+
+
+        <!-- INVISIBLE FILE INPUT -->
+        <input id="media-upload-input"
+          #fileInput
+          name="mediaFiles"
+          type="file"
+          accept="image/*,.pdf"
+          class=""
+          multiple="false"
+          (change)="selectMedia($event)">
+          <!--<input type="file" ng2FileSelect [uploader]="uploader" multiple  />-->
+
+      </div>
+
+
+      <!-- Error -->
+      <div *ngSwitchCase="'error'" (tap)="switchLeftControl('success')" fxLayout="column" fxLayoutAlign="space-around center"
+        class="animated fadeIn">
+        <md-icon class="mdl-color-text--red-500 scale-1-7t mb-0-3q">warning</md-icon>
+        <p class="mdl-color-text--white text-center mb-0">An Error Occurred</p>
+      </div>
+
+      <!-- Success Message-->
+      <div *ngSwitchCase="'success'" (tap)="switchLeftControl('add')" fxLayout="column" fxLayoutAlign="space-around center"
+        class="animated fadeIn">
+        <md-icon class="mdl-color-text--green-300 scale-1-7t mb-0-3q">check</md-icon>
+        <p class="mdl-color-text--white text-center mb-0">Successful upload</p>
+      </div>
+
+
+      <!--<button md-fab *ngSwitchCase="add"><md-icon>add</md-icon></button>-->
+    </aside>
+
+    <!-- Filmstrip -->
+    <main class="filmstrip-container">
+        <div class="mdl-color--black"
+          [perfect-scrollbar]="perfectScrollbarConfig"
+          fxFlex fxLayout="row" fxLayoutNoWrap> <!-- smooth-xscroll -->
+
+          <!-- filmstrip-overflow -->
+            <div class="" fxFlex fxLayout="row" fxLayoutNoWrap style="min-height:9rem">
+
+              <!-- Media -->
+              <section class="h-max-100-p w-max-100-p w-12 relative p-1 animated fadeIn"
+                *ngFor="let mediaItem of media">
+                <!--<div *ngIf="mediaItem" class="">-->
+                  <img [src]="mediaItem?.Preview || mediaItem?.Original"
+                    draggable="false"
+                    ondragstart="return false;"
+                    alt="" class="filmstrip--media-thumbnail materialbox">
+                <!--</div>-->
+              </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Right Controls-->
+    <aside class="w-6 controlRight relative z-1000"
+      fxLayout="column" fxLayoutWrap fxLayoutAlign="center center"
+      [ngSwitch]="rightControl">
+
+      <!-- Default / Waiting-->
+      <div md-fab *ngSwitchDefault (tap)="switchRightControl('upload')" class="animated fadeIn">
+        <p class="mdl-color-text--white text-center mb-0">Awaiting Media</p>
+      </div>
+      <div md-fab *ngSwitchCase="'waiting'" (tap)="switchRightControl('upload')" class="animated fadeIn">
+        <p class="mdl-color-text--white text-center mb-0">Awaiting Media</p>
+      </div>
+
+      <!-- Upload button-->
+      <div *ngSwitchCase="'upload'"
+        fxLayout="column" fxLayoutAlign="space-around center"
+        class="animated fadeIn">
+        <button md-fab
+          (tap)="switchRightControl('uploading')">
+          <md-icon>cloud_upload</md-icon>
+        </button>
+        <p class="mt-3 mb-0 mdl-color-text--white">Upload</p>
+      </div>
+
+      <!-- Uploading spinner-->
+      <div *ngSwitchCase="'uploading'"
+        (tap)="switchRightControl('retry')"
+        fxLayout="column" fxLayoutAlign="space-around center"
+        class="animated fadeIn mdl-color-text--white">
+        <span class="scale-2">
+          <md-icon class="mdl-color-text--grey-500 animated fa-spin" style="transform-origin: 50% 50%;">
+            brightness_high
+          </md-icon>
+        </span>
+        <p class="text-center mt-0-3q mb-0">working...</p>
+      </div>
+
+      <!-- Retry button -->
+      <div *ngSwitchCase="'retry'"
+        fxLayout="column" fxLayoutAlign="space-around center"
+        class="animated fadeIn">
+        <button md-fab
+          (tap)="switchRightControl('waiting')"
+          class="animated fadeIn mdl-color--amber-900">
+          <md-icon>autorenew</md-icon>
+        </button>
+        <p class="mt-3 mb-0 mdl-color-text--white">Retry</p>
+      </div>
+
+    </aside>
+</form>

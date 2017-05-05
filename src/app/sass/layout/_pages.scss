@@ -1,0 +1,648 @@
+
+// classes page-landscape-3 page-portrait-10
+/*******************************************
+___  ____    _  _ ____ ___    ___  ____ _    ____ ___ ____
+|  \ |  |    |\ | |  |  |     |  \ |___ |    |___  |  |___
+|__/ |__|    | \| |__|  |     |__/ |___ |___ |___  |  |___
+http://beautifytools.com/scss-compiler.php
+*******************************************/
+
+// @mixin pagelandscape($rems) {
+//   width: calc(10 * #{$rems}rem);
+//   height: calc(7.727272727272727 * #{$rems}rem);
+// }
+// @mixin pageportrait($rems) {
+//   width: calc(7.727272727272727 * #{$rems}rem);
+//   height: calc(10 * #{$rems}rem);
+// }
+// @mixin minpageportrait($rems) {
+//   width: calc(7.727272727272727 * #{$rems}rem);
+//   min-height: calc(10 * #{$rems}rem);
+// }
+
+// $countAgainToTen: 10;
+// @for $i from 0 through $countAgainToTen * 4 {
+//   .page-landscape-#{ floor($i / 4) }#{ nth(null -1q -half -3q, $i % 4 + 1) } {
+//     @include pagelandscape( ( $i / 4 )  );
+//   }
+//   .page-portrait-#{ floor($i / 4) }#{ nth(null -1q -half -3q, $i % 4 + 1) } {
+//     @include pageportrait( ( $i / 4 )  );
+//   }
+//   .min-page-portrait-#{ floor($i / 4) }#{ nth(null -1q -half -3q, $i % 4 + 1) } {
+//     @include minpageportrait( ( $i / 4 )  );
+//   }
+// }
+.page-landscape-0 {
+	width: calc(10 * 0rem);
+	height: calc(7.727272727272727 * 0rem);
+}
+
+.page-portrait-0 {
+	width: calc(7.727272727272727 * 0rem);
+	height: calc(10 * 0rem);
+}
+
+.min-page-portrait-0 {
+	width: calc(7.727272727272727 * 0rem);
+	min-height: calc(10 * 0rem);
+}
+
+.page-landscape-0-1q {
+	width: calc(10 * 0.25rem);
+	height: calc(7.727272727272727 * 0.25rem);
+}
+
+.page-portrait-0-1q {
+	width: calc(7.727272727272727 * 0.25rem);
+	height: calc(10 * 0.25rem);
+}
+
+.min-page-portrait-0-1q {
+	width: calc(7.727272727272727 * 0.25rem);
+	min-height: calc(10 * 0.25rem);
+}
+
+.page-landscape-0-half {
+	width: calc(10 * 0.5rem);
+	height: calc(7.727272727272727 * 0.5rem);
+}
+
+.page-portrait-0-half {
+	width: calc(7.727272727272727 * 0.5rem);
+	height: calc(10 * 0.5rem);
+}
+
+.min-page-portrait-0-half {
+	width: calc(7.727272727272727 * 0.5rem);
+	min-height: calc(10 * 0.5rem);
+}
+
+.page-landscape-0-3q {
+	width: calc(10 * 0.75rem);
+	height: calc(7.727272727272727 * 0.75rem);
+}
+
+.page-portrait-0-3q {
+	width: calc(7.727272727272727 * 0.75rem);
+	height: calc(10 * 0.75rem);
+}
+
+.min-page-portrait-0-3q {
+	width: calc(7.727272727272727 * 0.75rem);
+	min-height: calc(10 * 0.75rem);
+}
+
+.page-landscape-1 {
+	width: calc(10 * 1rem);
+	height: calc(7.727272727272727 * 1rem);
+}
+
+.page-portrait-1 {
+	width: calc(7.727272727272727 * 1rem);
+	height: calc(10 * 1rem);
+}
+
+.min-page-portrait-1 {
+	width: calc(7.727272727272727 * 1rem);
+	min-height: calc(10 * 1rem);
+}
+
+.page-landscape-1-1q {
+	width: calc(10 * 1.25rem);
+	height: calc(7.727272727272727 * 1.25rem);
+}
+
+.page-portrait-1-1q {
+	width: calc(7.727272727272727 * 1.25rem);
+	height: calc(10 * 1.25rem);
+}
+
+.min-page-portrait-1-1q {
+	width: calc(7.727272727272727 * 1.25rem);
+	min-height: calc(10 * 1.25rem);
+}
+
+.page-landscape-1-half {
+	width: calc(10 * 1.5rem);
+	height: calc(7.727272727272727 * 1.5rem);
+}
+
+.page-portrait-1-half {
+	width: calc(7.727272727272727 * 1.5rem);
+	height: calc(10 * 1.5rem);
+}
+
+.min-page-portrait-1-half {
+	width: calc(7.727272727272727 * 1.5rem);
+	min-height: calc(10 * 1.5rem);
+}
+
+.page-landscape-1-3q {
+	width: calc(10 * 1.75rem);
+	height: calc(7.727272727272727 * 1.75rem);
+}
+
+.page-portrait-1-3q {
+	width: calc(7.727272727272727 * 1.75rem);
+	height: calc(10 * 1.75rem);
+}
+
+.min-page-portrait-1-3q {
+	width: calc(7.727272727272727 * 1.75rem);
+	min-height: calc(10 * 1.75rem);
+}
+
+.page-landscape-2 {
+	width: calc(10 * 2rem);
+	height: calc(7.727272727272727 * 2rem);
+}
+
+.page-portrait-2 {
+	width: calc(7.727272727272727 * 2rem);
+	height: calc(10 * 2rem);
+}
+
+.min-page-portrait-2 {
+	width: calc(7.727272727272727 * 2rem);
+	min-height: calc(10 * 2rem);
+}
+
+.page-landscape-2-1q {
+	width: calc(10 * 2.25rem);
+	height: calc(7.727272727272727 * 2.25rem);
+}
+
+.page-portrait-2-1q {
+	width: calc(7.727272727272727 * 2.25rem);
+	height: calc(10 * 2.25rem);
+}
+
+.min-page-portrait-2-1q {
+	width: calc(7.727272727272727 * 2.25rem);
+	min-height: calc(10 * 2.25rem);
+}
+
+.page-landscape-2-half {
+	width: calc(10 * 2.5rem);
+	height: calc(7.727272727272727 * 2.5rem);
+}
+
+.page-portrait-2-half {
+	width: calc(7.727272727272727 * 2.5rem);
+	height: calc(10 * 2.5rem);
+}
+
+.min-page-portrait-2-half {
+	width: calc(7.727272727272727 * 2.5rem);
+	min-height: calc(10 * 2.5rem);
+}
+
+.page-landscape-2-3q {
+	width: calc(10 * 2.75rem);
+	height: calc(7.727272727272727 * 2.75rem);
+}
+
+.page-portrait-2-3q {
+	width: calc(7.727272727272727 * 2.75rem);
+	height: calc(10 * 2.75rem);
+}
+
+.min-page-portrait-2-3q {
+	width: calc(7.727272727272727 * 2.75rem);
+	min-height: calc(10 * 2.75rem);
+}
+
+.page-landscape-3 {
+	width: calc(10 * 3rem);
+	height: calc(7.727272727272727 * 3rem);
+}
+
+.page-portrait-3 {
+	width: calc(7.727272727272727 * 3rem);
+	height: calc(10 * 3rem);
+}
+
+.min-page-portrait-3 {
+	width: calc(7.727272727272727 * 3rem);
+	min-height: calc(10 * 3rem);
+}
+
+.page-landscape-3-1q {
+	width: calc(10 * 3.25rem);
+	height: calc(7.727272727272727 * 3.25rem);
+}
+
+.page-portrait-3-1q {
+	width: calc(7.727272727272727 * 3.25rem);
+	height: calc(10 * 3.25rem);
+}
+
+.min-page-portrait-3-1q {
+	width: calc(7.727272727272727 * 3.25rem);
+	min-height: calc(10 * 3.25rem);
+}
+
+.page-landscape-3-half {
+	width: calc(10 * 3.5rem);
+	height: calc(7.727272727272727 * 3.5rem);
+}
+
+.page-portrait-3-half {
+	width: calc(7.727272727272727 * 3.5rem);
+	height: calc(10 * 3.5rem);
+}
+
+.min-page-portrait-3-half {
+	width: calc(7.727272727272727 * 3.5rem);
+	min-height: calc(10 * 3.5rem);
+}
+
+.page-landscape-3-3q {
+	width: calc(10 * 3.75rem);
+	height: calc(7.727272727272727 * 3.75rem);
+}
+
+.page-portrait-3-3q {
+	width: calc(7.727272727272727 * 3.75rem);
+	height: calc(10 * 3.75rem);
+}
+
+.min-page-portrait-3-3q {
+	width: calc(7.727272727272727 * 3.75rem);
+	min-height: calc(10 * 3.75rem);
+}
+
+.page-landscape-4 {
+	width: calc(10 * 4rem);
+	height: calc(7.727272727272727 * 4rem);
+}
+
+.page-portrait-4 {
+	width: calc(7.727272727272727 * 4rem);
+	height: calc(10 * 4rem);
+}
+
+.min-page-portrait-4 {
+	width: calc(7.727272727272727 * 4rem);
+	min-height: calc(10 * 4rem);
+}
+
+.page-landscape-4-1q {
+	width: calc(10 * 4.25rem);
+	height: calc(7.727272727272727 * 4.25rem);
+}
+
+.page-portrait-4-1q {
+	width: calc(7.727272727272727 * 4.25rem);
+	height: calc(10 * 4.25rem);
+}
+
+.min-page-portrait-4-1q {
+	width: calc(7.727272727272727 * 4.25rem);
+	min-height: calc(10 * 4.25rem);
+}
+
+.page-landscape-4-half {
+	width: calc(10 * 4.5rem);
+	height: calc(7.727272727272727 * 4.5rem);
+}
+
+.page-portrait-4-half {
+	width: calc(7.727272727272727 * 4.5rem);
+	height: calc(10 * 4.5rem);
+}
+
+.min-page-portrait-4-half {
+	width: calc(7.727272727272727 * 4.5rem);
+	min-height: calc(10 * 4.5rem);
+}
+
+.page-landscape-4-3q {
+	width: calc(10 * 4.75rem);
+	height: calc(7.727272727272727 * 4.75rem);
+}
+
+.page-portrait-4-3q {
+	width: calc(7.727272727272727 * 4.75rem);
+	height: calc(10 * 4.75rem);
+}
+
+.min-page-portrait-4-3q {
+	width: calc(7.727272727272727 * 4.75rem);
+	min-height: calc(10 * 4.75rem);
+}
+
+.page-landscape-5 {
+	width: calc(10 * 5rem);
+	height: calc(7.727272727272727 * 5rem);
+}
+
+.page-portrait-5 {
+	width: calc(7.727272727272727 * 5rem);
+	height: calc(10 * 5rem);
+}
+
+.min-page-portrait-5 {
+	width: calc(7.727272727272727 * 5rem);
+	min-height: calc(10 * 5rem);
+}
+
+.page-landscape-5-1q {
+	width: calc(10 * 5.25rem);
+	height: calc(7.727272727272727 * 5.25rem);
+}
+
+.page-portrait-5-1q {
+	width: calc(7.727272727272727 * 5.25rem);
+	height: calc(10 * 5.25rem);
+}
+
+.min-page-portrait-5-1q {
+	width: calc(7.727272727272727 * 5.25rem);
+	min-height: calc(10 * 5.25rem);
+}
+
+.page-landscape-5-half {
+	width: calc(10 * 5.5rem);
+	height: calc(7.727272727272727 * 5.5rem);
+}
+
+.page-portrait-5-half {
+	width: calc(7.727272727272727 * 5.5rem);
+	height: calc(10 * 5.5rem);
+}
+
+.min-page-portrait-5-half {
+	width: calc(7.727272727272727 * 5.5rem);
+	min-height: calc(10 * 5.5rem);
+}
+
+.page-landscape-5-3q {
+	width: calc(10 * 5.75rem);
+	height: calc(7.727272727272727 * 5.75rem);
+}
+
+.page-portrait-5-3q {
+	width: calc(7.727272727272727 * 5.75rem);
+	height: calc(10 * 5.75rem);
+}
+
+.min-page-portrait-5-3q {
+	width: calc(7.727272727272727 * 5.75rem);
+	min-height: calc(10 * 5.75rem);
+}
+
+.page-landscape-6 {
+	width: calc(10 * 6rem);
+	height: calc(7.727272727272727 * 6rem);
+}
+
+.page-portrait-6 {
+	width: calc(7.727272727272727 * 6rem);
+	height: calc(10 * 6rem);
+}
+
+.min-page-portrait-6 {
+	width: calc(7.727272727272727 * 6rem);
+	min-height: calc(10 * 6rem);
+}
+
+.page-landscape-6-1q {
+	width: calc(10 * 6.25rem);
+	height: calc(7.727272727272727 * 6.25rem);
+}
+
+.page-portrait-6-1q {
+	width: calc(7.727272727272727 * 6.25rem);
+	height: calc(10 * 6.25rem);
+}
+
+.min-page-portrait-6-1q {
+	width: calc(7.727272727272727 * 6.25rem);
+	min-height: calc(10 * 6.25rem);
+}
+
+.page-landscape-6-half {
+	width: calc(10 * 6.5rem);
+	height: calc(7.727272727272727 * 6.5rem);
+}
+
+.page-portrait-6-half {
+	width: calc(7.727272727272727 * 6.5rem);
+	height: calc(10 * 6.5rem);
+}
+
+.min-page-portrait-6-half {
+	width: calc(7.727272727272727 * 6.5rem);
+	min-height: calc(10 * 6.5rem);
+}
+
+.page-landscape-6-3q {
+	width: calc(10 * 6.75rem);
+	height: calc(7.727272727272727 * 6.75rem);
+}
+
+.page-portrait-6-3q {
+	width: calc(7.727272727272727 * 6.75rem);
+	height: calc(10 * 6.75rem);
+}
+
+.min-page-portrait-6-3q {
+	width: calc(7.727272727272727 * 6.75rem);
+	min-height: calc(10 * 6.75rem);
+}
+
+.page-landscape-7 {
+	width: calc(10 * 7rem);
+	height: calc(7.727272727272727 * 7rem);
+}
+
+.page-portrait-7 {
+	width: calc(7.727272727272727 * 7rem);
+	height: calc(10 * 7rem);
+}
+
+.min-page-portrait-7 {
+	width: calc(7.727272727272727 * 7rem);
+	min-height: calc(10 * 7rem);
+}
+
+.page-landscape-7-1q {
+	width: calc(10 * 7.25rem);
+	height: calc(7.727272727272727 * 7.25rem);
+}
+
+.page-portrait-7-1q {
+	width: calc(7.727272727272727 * 7.25rem);
+	height: calc(10 * 7.25rem);
+}
+
+.min-page-portrait-7-1q {
+	width: calc(7.727272727272727 * 7.25rem);
+	min-height: calc(10 * 7.25rem);
+}
+
+.page-landscape-7-half {
+	width: calc(10 * 7.5rem);
+	height: calc(7.727272727272727 * 7.5rem);
+}
+
+.page-portrait-7-half {
+	width: calc(7.727272727272727 * 7.5rem);
+	height: calc(10 * 7.5rem);
+}
+
+.min-page-portrait-7-half {
+	width: calc(7.727272727272727 * 7.5rem);
+	min-height: calc(10 * 7.5rem);
+}
+
+.page-landscape-7-3q {
+	width: calc(10 * 7.75rem);
+	height: calc(7.727272727272727 * 7.75rem);
+}
+
+.page-portrait-7-3q {
+	width: calc(7.727272727272727 * 7.75rem);
+	height: calc(10 * 7.75rem);
+}
+
+.min-page-portrait-7-3q {
+	width: calc(7.727272727272727 * 7.75rem);
+	min-height: calc(10 * 7.75rem);
+}
+
+.page-landscape-8 {
+	width: calc(10 * 8rem);
+	height: calc(7.727272727272727 * 8rem);
+}
+
+.page-portrait-8 {
+	width: calc(7.727272727272727 * 8rem);
+	height: calc(10 * 8rem);
+}
+
+.min-page-portrait-8 {
+	width: calc(7.727272727272727 * 8rem);
+	min-height: calc(10 * 8rem);
+}
+
+.page-landscape-8-1q {
+	width: calc(10 * 8.25rem);
+	height: calc(7.727272727272727 * 8.25rem);
+}
+
+.page-portrait-8-1q {
+	width: calc(7.727272727272727 * 8.25rem);
+	height: calc(10 * 8.25rem);
+}
+
+.min-page-portrait-8-1q {
+	width: calc(7.727272727272727 * 8.25rem);
+	min-height: calc(10 * 8.25rem);
+}
+
+.page-landscape-8-half {
+	width: calc(10 * 8.5rem);
+	height: calc(7.727272727272727 * 8.5rem);
+}
+
+.page-portrait-8-half {
+	width: calc(7.727272727272727 * 8.5rem);
+	height: calc(10 * 8.5rem);
+}
+
+.min-page-portrait-8-half {
+	width: calc(7.727272727272727 * 8.5rem);
+	min-height: calc(10 * 8.5rem);
+}
+
+.page-landscape-8-3q {
+	width: calc(10 * 8.75rem);
+	height: calc(7.727272727272727 * 8.75rem);
+}
+
+.page-portrait-8-3q {
+	width: calc(7.727272727272727 * 8.75rem);
+	height: calc(10 * 8.75rem);
+}
+
+.min-page-portrait-8-3q {
+	width: calc(7.727272727272727 * 8.75rem);
+	min-height: calc(10 * 8.75rem);
+}
+
+.page-landscape-9 {
+	width: calc(10 * 9rem);
+	height: calc(7.727272727272727 * 9rem);
+}
+
+.page-portrait-9 {
+	width: calc(7.727272727272727 * 9rem);
+	height: calc(10 * 9rem);
+}
+
+.min-page-portrait-9 {
+	width: calc(7.727272727272727 * 9rem);
+	min-height: calc(10 * 9rem);
+}
+
+.page-landscape-9-1q {
+	width: calc(10 * 9.25rem);
+	height: calc(7.727272727272727 * 9.25rem);
+}
+
+.page-portrait-9-1q {
+	width: calc(7.727272727272727 * 9.25rem);
+	height: calc(10 * 9.25rem);
+}
+
+.min-page-portrait-9-1q {
+	width: calc(7.727272727272727 * 9.25rem);
+	min-height: calc(10 * 9.25rem);
+}
+
+.page-landscape-9-half {
+	width: calc(10 * 9.5rem);
+	height: calc(7.727272727272727 * 9.5rem);
+}
+
+.page-portrait-9-half {
+	width: calc(7.727272727272727 * 9.5rem);
+	height: calc(10 * 9.5rem);
+}
+
+.min-page-portrait-9-half {
+	width: calc(7.727272727272727 * 9.5rem);
+	min-height: calc(10 * 9.5rem);
+}
+
+.page-landscape-9-3q {
+	width: calc(10 * 9.75rem);
+	height: calc(7.727272727272727 * 9.75rem);
+}
+
+.page-portrait-9-3q {
+	width: calc(7.727272727272727 * 9.75rem);
+	height: calc(10 * 9.75rem);
+}
+
+.min-page-portrait-9-3q {
+	width: calc(7.727272727272727 * 9.75rem);
+	min-height: calc(10 * 9.75rem);
+}
+
+.page-landscape-10 {
+	width: calc(10 * 10rem);
+	height: calc(7.727272727272727 * 10rem);
+}
+
+.page-portrait-10 {
+	width: calc(7.727272727272727 * 10rem);
+	height: calc(10 * 10rem);
+}
+
+.min-page-portrait-10 {
+	width: calc(7.727272727272727 * 10rem);
+	min-height: calc(10 * 10rem);
+}

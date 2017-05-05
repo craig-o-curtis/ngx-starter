@@ -1,0 +1,40 @@
+<div class="orangelime-app-theme">
+  <h1 md-dialog-title>Release Notes</h1>
+  <div md-dialog-content>
+    What would you like to do?
+
+    <!-- Materialize.css-->
+    <ul class="collapsible vw-min-50"
+      #collapsible
+      data-collapsible="expandable" >
+      <!-- or data-collapsible="accordion" -->
+      <li>
+        <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      </li>
+    </ul>
+  </div>
+
+  <div md-dialog-actions fxLayout="row" fxLayoutAlign="space-between center">
+      <!-- Cancel -->
+      <button md-button md-raised-button color="accent"
+          (tap)="dialogRef.close('Cancel')">
+          <md-icon>cancel</md-icon>
+          Cancel
+      </button>
+      <!-- Send -->
+      <button md-button md-raised-button color="primary"
+          (tap)="dialogRef.close('Confirm')">
+          <md-icon>check</md-icon>
+          Confirm
+      </button>
+  </div>
+</div>

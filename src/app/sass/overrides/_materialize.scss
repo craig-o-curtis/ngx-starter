@@ -1,0 +1,40 @@
+
+// Angular Material2 over Materialize.css
+// removes input bottom borders
+.mat-reset-input,
+md-input-container > input[attr="mdInput"] {
+  border: none !important;
+  box-shadow: none !important;
+  // margin-bottom: 0 !important;
+  // padding-bottom: 0 !important;
+}
+
+// remove materialize styling and spacing
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+    background-color: initial;
+    border: initial;
+    border-bottom: initial;
+    border-radius: initial;
+    outline: initial;
+    height: initial;
+    // width: initial;
+    font-size: initial;
+    margin: initial;
+    padding: initial;
+    box-shadow: initial;
+    box-sizing: initial;
+    -webkit-transition: initial;
+    transition: initial;
+}

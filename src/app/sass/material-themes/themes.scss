@@ -1,0 +1,58 @@
+@import '~@angular/material/theming';
+// before update to ng-4.0.2 was @import '~@angular/material/prebuilt-themes/theming/all-theme';
+// Plus imports for other components in your app.
+
+// Include the base styles for Angular Material core. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+
+$cloudy-app-primary: mat-palette($mat-blue, 900, 700, 600);
+$cloudy-app-accent: mat-palette($mat-blue-grey, 900, 900, 900);
+// The warn palette is optional (defaults to red).
+$cloudy-app-warn:  mat-palette($mat-red, 800, 400, 300);
+// Create the theme object (a Sass map containing all of the palettes).
+$cloudy-app-theme: mat-light-theme($cloudy-app-primary, $cloudy-app-accent, $cloudy-app-warn);
+
+// Orange and Lime
+$orangelime-app-primary: mat-palette($mat-deep-orange, 900,500,900 );
+$orangelime-app-accent: mat-palette($mat-grey, 900,700,200);
+$orangelime-app-warn: mat-palette($mat-lime, A700, A400, A200);
+$orangelime-app-theme: mat-light-theme($orangelime-app-primary, $orangelime-app-accent, $orangelime-app-warn);
+//  Green and Blue
+$spring-app-primary: mat-palette($mat-light-blue, 600, 800, 900);
+$spring-app-accent: mat-palette($mat-light-green, A400, A700, 900);
+$spring-app-warn: mat-palette($mat-amber, 400, 700, 200);
+$spring-app-theme: mat-light-theme($spring-app-primary, $spring-app-accent, $spring-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($cloudy-app-theme);
+
+.spring-app-theme {
+  $spring-app-primary: mat-palette($mat-light-blue, 600, 800, 900);
+  $spring-app-accent: mat-palette($mat-light-green, A400, A700, 900);
+  $spring-app-warn: mat-palette($mat-amber, 400, 700, 200);
+  $spring-app-theme: mat-light-theme($spring-app-primary, $spring-app-accent, $spring-app-warn);
+  @include angular-material-theme($spring-app-theme);
+}
+.orangelime-app-theme {
+  $orangelime-app-primary: mat-palette($mat-deep-orange, 500,200,900 );
+  $orangelime-app-accent: mat-palette($mat-grey, 900,700,200);
+  $orangelime-app-warn: mat-palette($mat-lime, A700, A400, A200);
+  $orangelime-app-theme: mat-light-theme($orangelime-app-primary, $orangelime-app-accent, $orangelime-app-warn);
+  @include angular-material-theme($orangelime-app-theme);
+}
+
+
+.app-dark-theme {
+  $dark-primary: mat-palette($mat-blue-grey, A200, A100, A400);
+  $dark-accent:  mat-palette($mat-amber, A200, A100, A400);
+  $dark-warn:    mat-palette($mat-deep-orange, A200, A100, A400);
+  $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+  @include angular-material-theme($dark-theme);
+}

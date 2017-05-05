@@ -1,0 +1,36 @@
+
+/* mydatepicker and mydaterangepicker hack */
+.mydp.mydp,
+.mydrp.mydrp {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.mydrp.mydrp .selection.selection {
+  padding-right: 0px ;
+}
+/* selector chain for specificity */
+.mydp.mydp .selection.selection,
+.mydrp.mydrp .selection.selection {
+  border-radius: 0;
+}
+.selbtngroup {
+  left: 5px;
+  top: -1px;
+}
+/* Materialize.css hack bottom of daterangepicker */
+input:not([type]),
+input[type=text] {
+  transition: all 0.1s;
+}
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]) {
+  border-bottom: 2px solid black;
+  box-shadow: 0 1px 0 0 #000;
+}
+input:not([type]):focus:not([readonly]).invaliddate,
+input[type=text]:focus:not([readonly]).invaliddate {
+  background-color: transparent;
+  border-bottom: 2px solid firebrick;
+  box-shadow: none;
+}
+

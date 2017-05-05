@@ -1,0 +1,26 @@
+$mdl-indigo : rgb(63, 81, 117);
+$mdl-blue : rgb(33, 150, 243);
+$mdl-light-blue : rgb(3, 169, 244);
+$mdl-cyan : rgb(0, 188, 212);
+$mdl-teal : rgb(0, 150, 136);
+$mdl-green : rgb(76, 175, 80);
+$mdl-lime-green : rgb(139, 195, 74);
+$mdl-lime : rgb(205, 220, 57);
+$mdl-yellow : rgb(255, 235, 59);
+$mdl-amber : rgb(255, 193, 7);
+$mdl-orange : rgb(255, 152, 0);
+$mdl-brown : rgb(121, 85, 72);
+$mdl-blue-grey : rgb(96, 125, 139);
+$mdl-blue-grey-900 : rgb(33,33,33);
+$mdl-grey : rgb(158, 158, 158);
+$mdl-deep-orange : rgb(255, 87, 34);
+$mdl-red : rgb(244, 67, 54);
+$mdl-pink : rgb(233, 30, 99);
+$mdl-purple : rgb(156, 39, 176);
+$mdl-deep-purple : rgb(103, 58, 183);
+$mdl-black : rgb(0, 0, 0);
+$mdl-white : rgb(255, 255, 255);
+
+// array of colors to loop through
+$mdl-color-list : $mdl-indigo, $mdl-blue, $mdl-light-blue, $mdl-cyan, $mdl-teal, $mdl-green, $mdl-lime-green, $mdl-lime,$mdl-yellow, $mdl-amber, $mdl-orange, $mdl-brown, $mdl-blue-grey, $mdl-grey, $mdl-deep-orange, $mdl-red, $mdl-pink, $mdl-purple, $mdl-deep-purple, $mdl-black, $mdl-white;
+$mdl-color-names : 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'lime-green', 'lime', 'yellow', 'amber', 'orange', 'brown', 'blue-grey', 'grey', 'deep-orange', 'red', 'pink', 'purple', 'deep-purple', 'black', 'white';

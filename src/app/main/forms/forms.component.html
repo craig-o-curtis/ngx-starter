@@ -1,0 +1,381 @@
+<!-- NOTES
+* Split ngModel for more custom functionality
+  [ngModel]="firstName"
+  (ngModel)="firstName = $event"
+
+// architecture
+  //******** Model
+  // 1. define ModelForm class with constructors in models folder
+  // 2. use new class in component --
+  //  ex: public modelForm = new ModelForm('a', 'b', 'c', 'd');
+  // attach values to [(ngModel)] in view
+  //  ex: [(ngModel)]="modelForm.food"
+
+  //******** local variable #pageForm
+  // handles pristine / touched / valid
+  // #pageForm relates to name=""
+
+-->
+<div class="animated fadeIn mdl-color--blue-grey-900" fxLayout="row" fxLayoutAlign="space-around center">
+
+  <md-card class="min-page-portrait-7 m-4 animated slideInUp">
+    <div class="p-3">
+      <h3 class="border-b--light-blue" >General Info</h3>
+
+      <div class=" animated"
+        (swipeup)="swipeup = true"
+        [class.zoomOutUp]="swipeup" >Swipe me up to remove me!</div>
+
+      <form #pageForm="ngForm">
+
+        <!-- ngForm, template ref var -->
+        <div class="mdl-color--blue mdl-color-text--white p-3">
+          ModelForm: {{ modelForm | json }}
+        </div>
+
+        <br/>
+        <div class="mdl-color--lime-900 mdl-color-text--white p-3">
+
+          <br />
+          Angular: {{ pageForm.value | json }}
+          <p>{{pageForm?.touched}}</p>
+          <p>{{pageForm?.pristine}}</p>
+        </div>
+
+        <!-- INPUT BOXES -->
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutWrap>
+          <h5 fxFlex="100">Input boxes</h5>
+
+          <div fxFlex="100" fxLayoutAlign="space-between center" fxLayoutWrap>
+
+            <!-- Food -->
+            <md-input-container class="p-1 m-1">
+              <input mdInput placeholder="Favorite food"
+                class="mat-reset-input"
+                name="food"
+                #food="ngModel"
+                [(ngModel)]="modelForm.food"
+                value="Sushi"
+                required
+                ngDefaultControl>
+                <md-hint *ngIf="food.invalid && food.touched" class="mdl-color-text--red" align="end">
+                  Please enter a food
+                </md-hint>
+            </md-input-container>
+
+            <!-- Tel -->
+            <md-input-container class="p-1 m-1">
+              <input mdInput
+                type="tel"
+                placeholder="Tel."
+                class="mat-reset-input"
+                name="tel"
+                #tel="ngModel"
+                pattern="[\+|0-9|\-|\s]+"
+                [ngClass]="{'mdl-color-text--red-900': tel.invalid}"
+                [(ngModel)]="modelForm.tel"
+                value="12345678">
+                <md-hint *ngIf="tel.invalid && tel.touched" class="mdl-color-text--red" align="end">
+                  Enter a proper phone number
+                </md-hint>
+            </md-input-container>
+            <!--
+              local var for validity
+              ngmodel var on modelForm to pass up to API
+            -->
+
+            <!-- Address -->
+            <md-input-container class="p-1 m-1">
+              <input mdInput
+                placeholder="Address"
+                class="mat-reset-input"
+                name="address"
+                #address="ngModel"
+                required
+                [ngClass]="{'mdl-color-text--red-900': address.invalid}"
+                [(ngModel)]="modelForm.address"
+                value="">
+                <md-hint *ngIf="address.invalid && address.touched" class="mdl-color-text--red" align="end">
+                  Address is required
+                </md-hint>
+            </md-input-container>
+
+            <!-- Zip -->
+            <md-input-container class="p-1 m-1">
+              <input color="accent"
+                mdInput type="tel"
+                placeholder="Zip"
+                class="mat-reset-input"
+                name="zip"
+                #zip="ngModel"
+                [ngClass]="{'mdl-color-text--red-900': zip.invalid}"
+                pattern="[0-9]{1,5}"
+                [(ngModel)]="modelForm.zip"
+                value="12345">
+                <!-- error message -->
+                <md-hint *ngIf="zip.invalid" class="mdl-color-text--red" align="end">
+                  Enter no more than 5 digits
+                </md-hint>
+            </md-input-container>
+
+          </div>
+        </div> <!-- INPUT BOXES -->
+
+        <!-- AUTOCOMPLETE -->
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutWrap>
+          <h5 fxFlex="100">Autocomplete</h5>
+
+          <div fxFlex="100" fxLayoutAlign="space-between center" fxLayoutWrap>
+
+            <!-- Finish Angular Forms and Angular Reactive Forms first -->
+          </div>
+        </div> <!-- AUTOCOMPLETE -->
+
+        <!-- SELECTS -->
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutWrap class="">
+          <h5 fxFlex="100" class="mb-4">Selects</h5>
+
+          <!-- Foods Favorite food-->
+          <section fxLayout="column">
+            <md-select
+              placeholder="Favorite food"
+              [(ngModel)]="modelForm.selectedFood"
+              name="selectedfood"
+              required
+              #favoriteFood="ngModel">
+              <md-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </md-option>
+              <!-- TEST - should show after push submit button and not chosen... -->
+            </md-select>
+            <md-hint *ngIf="favoriteFood.touched && favoriteFood.invalid" class="mdl-color-text--red" align="end">
+              Please select a food
+            </md-hint>
+          </section>
+
+
+          <!-- Cars -->
+          <md-select class="" placeholder="Favorite car" [(ngModel)]="modelForm.selectedCar" name="car">
+            <md-option *ngFor="let car of cars" [value]="car.value">
+              {{car.viewValue}}
+            </md-option>
+          </md-select>
+
+          <!-- Consoles -->
+          <md-select class="" placeholder="Favorite console" [(ngModel)]="modelForm.selectedConsole" name="console">
+            <md-option *ngFor="let console of consoles" [value]="console.value">
+              {{console.viewValue}}
+            </md-option>
+          </md-select>
+
+        </div> <!-- SELECTS -->
+
+        <!-- CHECKBOXES -->
+        <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutWrap>
+          <h5 fxFlex="100" class="mb-3">Checkboxes</h5>
+
+          <!-- Vertical Checkboxes -->
+          <section class="" fxFlex fxLayout="column" fxLayoutAlign="space-between stretch">
+
+            <div fxFlex="100">
+              <label for="checkboxes">Vertical Checkboxes</label>
+
+              <!-- TODO checkbox hint -- hook up to check if either checkbox not checked on submit-- -->
+              <md-hint *ngIf="beer.invalid || buffaloes.invalid" class="mdl-color-text--red" align="end">
+                Check at least one
+              </md-hint>
+            </div>
+
+            <article id="checkboxes" fxLayout="column" fxLayoutAlign="space-between stretch" required>
+
+              <!-- Beer-->
+              <md-checkbox color="accent"
+                [(ngModel)]="modelForm.beer"
+                name="beer"
+                #beer="ngModel"
+                required
+                [checked]="beerChecked"
+                [disabled]="beerDisabled">Beer</md-checkbox>
+
+              <!-- Buffaloes-->
+              <md-checkbox color="primary"
+                [(ngModel)]="modelForm.buffaloes"
+                name="buffaloes"
+                #buffaloes="ngModel"
+                required
+                [checked]="buffaloesChecked"
+                [disabled]="buffaloesDisabled">Buffaloes</md-checkbox>
+            </article>
+
+            <!--<md-hint *ngIf="true" class="mdl-color-text--red" align="end">
+              Check at least one
+            </md-hint>-->
+
+          </section>
+
+          <!-- Sprockets -->
+          <section class="" fxFlex>
+            <md-checkbox color="warn"
+              [(ngModel)]="modelForm.sprockets"
+              name="sprockets"
+              [checked]="sprocketsChecked"
+              [disabled]="sprocketsDisabled">Sprockets</md-checkbox>
+          </section>
+
+          <!-- Tortoises -->
+          <section class="" fxFlex>
+            <md-checkbox color="primary"
+              [(ngModel)]="modelForm.tortoises"
+              name="tortoises"
+              [checked]="tortoisesChecked"
+              [disabled]="tortoisesDisabled">Tortoises</md-checkbox>
+          </section>
+
+        </div> <!-- CHECKBOXES -->
+
+        <!-- RADIO BUTTONS -->
+        <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutWrap>
+          <h5 class="mb-3" fxFlex="100">Radio Buttons</h5>
+
+          <!-- Label and Hind-->
+          <div fxFlex="100">
+            <label for="seasons" >Choose a season</label>
+            <!-- hint -->
+            <md-hint *ngIf="season.invalid" class="mdl-color-text--red" align="end">
+              Please choose one season
+            </md-hint>
+          </div>
+
+          <md-radio-group id="seasons" fxFlex="100" fxLayoutAlign="space-around center"
+            [(ngModel)]="modelForm.favoriteSeason"
+            required
+            #season="ngModel"
+            color="warn"
+            name="season">
+            <md-radio-button fxFlex
+              color="warn"
+              *ngFor="let season of seasons"
+              [value]="season">
+              {{ season | initCaps }}
+            </md-radio-button>
+          </md-radio-group>
+
+        </div> <!-- RADIO BUTTONS -->
+
+        <!-- DATE PICKERS -->
+        <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutWrap>
+          <h5 fxFlex="100">Date Picker + Date Range Picker</h5>
+
+          <div fxLayout="row" fxLayoutNoWrap>
+
+            <!-- Datepicker 1-->
+            <section fxFlex class="m-1 p-1">
+              <!-- Could hack out a materialesque transition effect later-->
+              <label for="datepicker1">Datepicker 1</label>
+              <my-date-picker
+                id="datepicker1"
+                class="mat-reset-input"
+                name="mydate"
+                #dateModel1="ngModel"
+                required
+                [options]="datePickerOptions"
+                [(ngModel)]="modelForm.dateModel1"></my-date-picker>
+                <md-hint *ngIf="dateModel1.invalid" class="mdl-color-text--red" align="end">
+                  mm.dd.yyyy
+                </md-hint>
+            </section>
+
+            <!-- Datepicker 2-->
+            <section fxFlex class="m-1 p-1">
+              <label for="datepicker2">Datepicker 2</label>
+              <my-date-picker
+                id="datepicker2"
+                class="mat-reset-input"
+                name="mydate2"
+                #dateModel2="ngModel"
+                required
+                [options]="datePickerOptions"
+                [(ngModel)]="modelForm.dateModel2"></my-date-picker>
+                <md-hint *ngIf="dateModel2.invalid" class="mdl-color-text--red" align="end">
+                  mm.dd.yyyy
+                </md-hint>
+            </section>
+
+            <!-- Datepicker 3-->
+            <section fxFlex class="m-1 p-1" color="accent">
+              <label for="mydaterangeModel">Date Range Picker</label>
+              <my-date-range-picker
+                id="mydaterangeModel"
+                color="accent"
+                class="mat-reset-input"
+                name="mydaterange"
+                #mydaterange1="ngModel"
+                placeholder="testing"
+                [options]="myDateRangePickerOptions"
+                [(ngModel)]="modelForm.mydaterangeModel"></my-date-range-picker>
+                <!-- TODO - needs more work, Reactive Forms may be a better solution-->
+                <md-hint *ngIf="mydaterange1.invalid" class="mdl-color-text--red" align="end">
+                  mm.dd.yyyy - mm.dd.yyyy
+                </md-hint>
+            </section>
+          </div>
+
+        </div> <!-- DATE PICKERS -->
+
+        <!-- TOGGLES -->
+        <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutWrap>
+          <h5 class="mb-3" fxFlex="100">Toggles</h5>
+
+          <md-slide-toggle
+            [(ngModel)]="modelForm.toggle1"
+            name="toggle1"
+            color="accent">
+            <span [class.mdl-color-text--blue]="toggle1">Choice 1</span>
+          </md-slide-toggle>
+
+          <md-slide-toggle
+            [(ngModel)]="modelForm.toggle2"
+            name="toggle2"
+            color="accent">
+            <span [class.mdl-color-text--blue]="toggle2">Choice 2</span>
+          </md-slide-toggle>
+
+          <md-slide-toggle
+            [(ngModel)]="modelForm.toggle3"
+            name="toggle3"
+            color="accent">
+            <span [class.mdl-color-text--blue]="toggle3">Choice 3</span>
+          </md-slide-toggle>
+
+          <md-slide-toggle
+            [(ngModel)]="modelForm.toggle4"
+            name="toggle4"
+            color="accent">
+            <span [class.mdl-color-text--blue]="toggle4">Choice 4</span>
+          </md-slide-toggle>
+
+          <md-slide-toggle
+            [(ngModel)]="modelForm.toggle5"
+            name="toggle5"
+            color="warn">
+            <span [class.mdl-color-text--red]="toggle5">Choice 5</span>
+          </md-slide-toggle>
+
+        </div> <!-- TOGGLES -->
+
+      </form>
+    </div>
+
+    <!-- Media Uploader -->
+    <h4 class="border-b--light-blue" >Media Uploader</h4>
+
+    <app-media-uploader
+      [filetypes]="['jpg', 'jpeg', 'pdf', 'png', 'svg']">
+    </app-media-uploader>
+
+  </md-card>
+
+</div>
+
+
+

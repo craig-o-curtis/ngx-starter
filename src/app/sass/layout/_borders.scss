@@ -1,0 +1,137 @@
+/*******************************************
+___  ____    _  _ ____ ___    ___  ____ _    ____ ___ ____
+|  \ |  |    |\ | |  |  |     |  \ |___ |    |___  |  |___
+|__/ |__|    | \| |__|  |     |__/ |___ |___ |___  |  |___
+http://beautifytools.com/scss-compiler.php
+*******************************************/
+
+// @mixin bottom-border($color) {
+//   border-bottom: 2px solid $color;
+// }
+// .border-b- {
+//   &-lime-green {
+//     @include bottom-border($mdl-lime-green)
+//   }
+//   &-lime {
+//     @include bottom-border($mdl-lime)
+//   }
+//   &-yellow {
+//     @include bottom-border($mdl-lime)
+//   }
+//   &-amber {
+//     @include bottom-border($mdl-amber)
+//   }
+//   &-orange {
+//     @include bottom-border($mdl-orange)
+//   }
+//   &-brown {
+//     @include bottom-border($mdl-brown)
+//   }
+//   &-light-blue {
+//     @include bottom-border($mdl-light-blue)
+//   }
+//   &-blue {
+//     @include bottom-border($mdl-blue)
+//   }
+//   &-blue-grey {
+//     @include bottom-border($mdl-blue-grey)
+//   }
+//   &-blue-grey-900 {
+//     @include bottom-border($mdl-blue-grey-900)
+//   }
+//   &-grey {
+//     @include bottom-border($mdl-grey)
+//   }
+//   &-deep-orange {
+//     @include bottom-border($mdl-deep-orange)
+//   }
+//   &-red {
+//     @include bottom-border($mdl-red)
+//   }
+//   &-pink {
+//     @include bottom-border($mdl-pink)
+//   }
+//   &-purple {
+//     @include bottom-border($mdl-purple)
+//   }
+//   &-deep-purple {
+//     @include bottom-border($mdl-deep-purple)
+//   }
+//   &-black {
+//     @include bottom-border($mdl-black)
+//   }
+//   &-white {
+//     @include bottom-border($mdl-white)
+//   }
+// }
+.border-b--lime-green {
+	border-bottom: 2px solid #8bc34a;
+}
+
+.border-b--lime {
+	border-bottom: 2px solid #cddc39;
+}
+
+.border-b--yellow {
+	border-bottom: 2px solid #cddc39;
+}
+
+.border-b--amber {
+	border-bottom: 2px solid #ffc107;
+}
+
+.border-b--orange {
+	border-bottom: 2px solid #ff9800;
+}
+
+.border-b--brown {
+	border-bottom: 2px solid #795548;
+}
+
+.border-b--light-blue {
+	border-bottom: 2px solid #03a9f4;
+}
+
+.border-b--blue {
+	border-bottom: 2px solid #2196f3;
+}
+
+.border-b--blue-grey {
+	border-bottom: 2px solid #607d8b;
+}
+
+.border-b--blue-grey-900 {
+	border-bottom: 2px solid #212121;
+}
+
+.border-b--grey {
+	border-bottom: 2px solid #9e9e9e;
+}
+
+.border-b--deep-orange {
+	border-bottom: 2px solid #ff5722;
+}
+
+.border-b--red {
+	border-bottom: 2px solid #f44336;
+}
+
+.border-b--pink {
+	border-bottom: 2px solid #e91e63;
+}
+
+.border-b--purple {
+	border-bottom: 2px solid #9c27b0;
+}
+
+.border-b--deep-purple {
+	border-bottom: 2px solid #673ab7;
+}
+
+.border-b--black {
+	border-bottom: 2px solid black;
+}
+
+.border-b--white {
+	border-bottom: 2px solid white;
+}

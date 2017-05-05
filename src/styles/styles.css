@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';*/
+/*@import '~https://fonts.googleapis.com/icon?family=Material+Icons';*/
+
+@import './vendor-hacks/loading-spinner.css';
+@import './vendor-hacks/toastr.css';
+@import './vendor-hacks/datepickers.css';
+@import './vendor-hacks/perfect-scroll.css';

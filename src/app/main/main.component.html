@@ -1,0 +1,82 @@
+<md-sidenav-container class="vh-min-100">
+
+    <!-- Spinner Overlay -->
+    <app-spinner #mainSpinner
+      *ngIf="spinnerStatus"
+      [spinnerStatus]="spinnerStatus">
+    </app-spinner>
+
+    <!-- sidebar -->
+    <md-sidenav #sidenav fxLayout="column" class="">
+      <div (swipeleft)="sidenav.close()" fxFill>
+          <div fxLayout="column" fxLayoutAlign="start stretch" >
+              <!-- Home -->
+              <button color="primary" class="my-2"
+                  md-raised-button
+                  fxLayout="row" fxLayoutAlign="space-between stretch"
+                  (tap)="goHome();">
+                  <md-icon class="">home</md-icon>
+                  <span>Home</span>
+              </button>
+
+              <!-- Release Notes-->
+              <app-release-notes-btn
+                  class="mb-2"
+                  fxLayout="row"
+                  fxLayoutAlign="space-between stretch"
+                  (onReleaseNotesConfirmClicked)="sidenav.close()"
+                  (onReleaseNotesCancelClicked)="sidenav.close()">
+                  <md-icon class="">note</md-icon>
+                  <span>Release Notes</span>
+              </app-release-notes-btn>
+
+              <!-- Contact Us-->
+              <div app-contact-us-btn
+                  fxLayout="row"
+                  fxLayoutAlign="space-between stretch"
+                  (onContactUsConfirmClicked)="sidenav.close()"
+                  (onContactUsCancelClicked)="sidenav.close()">
+                  <md-icon>email</md-icon>
+                  <span>Contact Us</span>
+              </div>
+
+              <!-- Rate this App-->
+              <div app-rate-this-app-btn
+                  fxLayout="row"
+                  fxLayoutAlign="space-between stretch"
+                  (onRateThisAppConfirmClicked)="sidenav.close()"
+                  (onRateThisAppCancelClicked)="sidenav.close()">
+                  <md-icon>star</md-icon>
+                  <span>Rate this App</span>
+              </div>
+
+              <!-- User Guide -->
+              <button color="" class="" md-raised-button fxLayout="row" fxLayoutAlign="space-between stretch">
+                  <md-icon class="">info</md-icon>
+                  <span>User Guide</span>
+              </button>
+
+          </div>
+      </div>
+
+    </md-sidenav>
+
+
+    <!-- app-header-menu -->
+    <app-header-menu
+        (onSidenavClicked)="sidenav.open()"
+        (onLogoutClicked)="logout()">
+    </app-header-menu>
+    <!-- app-header-menu -->
+
+    <!-- Child Routes-->
+    <router-outlet></router-outlet>
+
+</md-sidenav-container>
+
+<app-fixed-action-button
+  #fixedActionButton
+  class="animated"
+  [class.bounceIn]="fabStatus"
+  [class.bounceOut]="!fabStatus">
+</app-fixed-action-button>

@@ -1,0 +1,44 @@
+<md-toolbar color="" class="p-2">
+
+    <!-- back arrow -- only show if not on home-->
+    <button md-mini-fab
+        class="mr-3"
+        (tap)="goBack()"
+        color="accent"><md-icon>arrow_back</md-icon></button>
+
+    <!-- left hamburger -->
+    <button md-mini-fab
+        class=""
+        (click)="notifyParentToggle()"
+        (tap)="notifyParentToggle()"
+        color="primary"><md-icon>menu</md-icon></button>
+    <!-- title -->
+    <div fxFlex fxLayout="row" fxLayoutAlign="center center">
+        <h4>{{title}}</h4>
+    </div>
+
+    <!-- right menu -->
+    <button md-icon-button
+      color="primary"
+      class=""
+      [mdMenuTriggerFor]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+
+    <md-menu #menu="mdMenu">
+      <button md-menu-item
+        (tap)="notifyParentLogout()">
+        <md-icon>arrow_back</md-icon>
+        <span>Logout</span>
+      </button>
+      <button md-menu-item>
+        <md-icon>person_outline</md-icon>
+        <span>User Info</span>
+      </button>
+      <button md-menu-item disabled>
+        <md-icon>notifications_off</md-icon>
+        <span>Disable alerts</span>
+      </button>
+    </md-menu>
+
+</md-toolbar><!-- header menu -->

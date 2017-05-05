@@ -1,0 +1,43 @@
+<md-sidenav-container class="app-container">
+
+  <div class="vh-min-100" fxLayout="column" fxLayoutAlign="center center" color="primary">
+
+        <md-card color="primary">
+        <!-- Header-->
+        <md-card-header>
+            <md-card-title >App Name Here</md-card-title>
+            <md-card-subtitle >Subtitle here</md-card-subtitle>
+        </md-card-header>
+        <!-- Body -->
+        <md-card-content>
+        <div>
+            <!-- username -->
+            <md-input-container class="" color="">
+                <input mdInput class="mat-reset-input" placeholder="Username" [(ngModel)]="username">
+            </md-input-container>
+            <!-- password -->
+            <md-input-container color="">
+                <input mdInput class="mat-reset-input" placeholder="Password" color="warn" [(ngModel)]="password">
+            </md-input-container>
+        </div>
+
+        </md-card-content>
+            <!-- Buttons -->
+            <md-card-actions fxLayout="row"
+                fxLayoutAlign="space-between center">
+                <!-- Reset -->
+                <button md-button md-raised-button color="accent" (tap)="reset()">
+                    <md-icon>refresh</md-icon>
+                    Reset
+                </button>
+                <!-- Login -->
+                <button md-button md-raised-button color="primary" (tap)="login()">
+                    <md-icon>arrow_forward</md-icon>
+                    Login
+                </button>
+            </md-card-actions>
+        </md-card>
+
+    </div>
+
+</md-sidenav-container>

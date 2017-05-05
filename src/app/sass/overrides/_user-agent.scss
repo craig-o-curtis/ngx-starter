@@ -1,0 +1,12 @@
+// override outline on chrome on star container
+:focus,
+::-webkit-focus-ring-color,
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none !important;
+  outline-color: none !important;
+  outline-style: none !important;
+  outline-width: none !important;
+}

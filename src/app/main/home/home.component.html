@@ -1,0 +1,158 @@
+<div fxLayout="column" class="orangelime-app-theme">
+  <!-- Intro -->
+  <md-card color="">
+    <div class="text-center p-2" color="warn">
+        <h1 color="warn">
+          Angular Template
+        </h1>
+        <p>This is a showcase for features built in the latest Angular technology.</p>
+    </div>
+  </md-card>
+
+
+  <!-- Features -->
+  <div fxFill fxLayout="column" fxLayout.gt-xs="row" fxLayoutWrap fxLayoutAlign="space-around stretch"><!--fxLayoutNoWrap-->
+
+    <!-- Reactive Forms Demo -->
+    <md-card class="m-2" fxFlex="50%" fxFlex.gt-sm="33%" fxFlex.gt-md="25%" fxFlex.gt-lg="20%"
+      fxLayout="column" fxLayoutAlign="space-between stretch">
+      <!-- Header -->
+      <md-card-header>
+        <md-card-title>Forms Demo 1</md-card-title>
+        <md-card-subtitle>Template Forms</md-card-subtitle>
+      </md-card-header>
+      <!-- Content-->
+      <md-card-content>
+        <p class="breakword">Traditional forms, but trickier error handling than reactive forms.</p>
+      </md-card-content>
+      <!-- Actions -->
+      <md-card-actions fxFlexLayout="row" fxLayoutAlign="space-between end">
+
+        <button
+          md-button
+          class=""
+          color="primary"
+          (tap)="goTo('/main/forms')">
+          <md-icon>remove_red_eye</md-icon>
+          <span>Preview</span>
+        </button>
+
+        <button md-button color="">
+          <md-icon>insert_drive_file</md-icon>
+          <span>Docs</span>
+        </button>
+      </md-card-actions>
+    </md-card>
+
+    <!-- Reactive Forms Demo -->
+    <md-card class="m-2" fxFlex="50%" fxFlex.gt-sm="33%" fxFlex.gt-md="25%" fxFlex.gt-lg="20%"
+      fxLayout="column" fxLayoutAlign="space-between stretch">
+      <!-- Header -->
+      <md-card-header>
+        <md-card-title>Forms Demo 2</md-card-title>
+        <md-card-subtitle>Reactive Forms</md-card-subtitle>
+      </md-card-header>
+      <!-- Content-->
+      <md-card-content>
+        <p>Better error handling, though slight duplication of effort</p>
+      </md-card-content>
+      <!-- Actions -->
+      <md-card-actions fxFlexLayout="row" fxLayoutAlign="space-between end">
+        <button md-button color="">
+          <md-icon>remove_red_eye</md-icon>
+          <span>Preview</span>
+        </button>
+        <button md-button color="">
+          <md-icon>insert_drive_file</md-icon>
+          <span>Docs</span>
+        </button>
+      </md-card-actions>
+    </md-card>
+
+    <!-- Tabular Demo -->
+    <md-card class="m-2" fxFlex="50" fxFlex.gt-sm="33%" fxFlex.gt-md="25%" fxFlex.gt-lg="20%"
+      fxLayout="column" fxLayoutAlign="space-between stretch">
+      <md-card-header>
+        <md-card-title>Tabular Layout</md-card-title>
+        <md-card-subtitle>Certain Use-Cases</md-card-subtitle>
+      </md-card-header>
+      <md-card-content>
+        <p>Tabular data is for lists of data. Though more modern, responsive, and user-friendly options exist for layout.</p>
+      </md-card-content>
+      <md-card-actions fxFlexLayout="row" fxLayoutAlign="space-between end">
+        <button md-button color="">
+          <md-icon>remove_red_eye</md-icon>
+          <span>Preview</span>
+        </button>
+        <button md-button color="">
+          <md-icon>insert_drive_file</md-icon>
+          <span>Docs</span>
+        </button>
+      </md-card-actions>
+    </md-card>
+
+  </div>
+</div>
+
+
+
+
+
+
+  <md-card>
+  <div class="">
+      <h1>Main Component</h1>
+      <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+        <thead>
+          <tr>
+            <th class="mdl-data-table__cell--non-numeric">Material</th>
+            <th>Quantity</th>
+            <th>Unit price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+            <td>25</td>
+            <td>$2.90</td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+            <td>50</td>
+            <td>$1.25</td>
+          </tr>
+          <tr>
+            <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+            <td>10</td>
+            <td>$2.35</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  </md-card>
+
+
+  <!-- MDL test -->
+  <span class="mdl-chip mdl-chip--contact">
+      <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">A</span>
+      <span class="mdl-chip__text">Contact Chip</span>
+  </span>
+
+
+
+
+
+
+  <md-card>
+    <h1>My First Attribute Directive</h1>
+    <h4>Pick a highlight color</h4>
+    <div>
+      <input type="radio" name="colors" (tap)="color='lightgreen'">Green
+      <input type="radio" name="colors" (tap)="color='yellow'">Yellow
+      <input type="radio" name="colors" (tap)="color='cyan'">Cyan
+    </div>
+    <p [myHighlight]="color">Highlight me!</p>
+    <p [myHighlight]="color" defaultColor="violet">
+      Highlight me too!
+    </p>
+  </md-card>

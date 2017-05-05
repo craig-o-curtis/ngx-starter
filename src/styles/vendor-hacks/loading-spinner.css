@@ -1,0 +1,37 @@
+/* hack index.html spinner */
+.loading-container {
+background:rgba(0,0,0,0.5);height:100vh;width:100vw;box-sizing: border-box;display: flex;flex-direction: column;-webkit-box-orient: vertical;-webkit-box-direction: normal;justify-content: center;align-items: center;align-content: center;-webkit-box-align: center;-webkit-box-pack: center;
+}
+.loading-spinner {
+  width: 200px;
+  animation: rotate 2s linear infinite;
+}
+.loading-spinner circle {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 5px;
+  stroke-dasharray: 2, 155;
+  stroke-dashoffset: 0;
+  animation: dash 1.75s cubic-bezier(0.4,0,0.2,1) infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 122, 20;
+    stroke-dashoffset: -20;
+  }
+  100% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: -155;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

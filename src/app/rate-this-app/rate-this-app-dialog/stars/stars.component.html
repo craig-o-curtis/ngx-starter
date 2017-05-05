@@ -1,0 +1,23 @@
+
+
+  <div fxLayout="column" fxLayoutAlign="space-between stretch">
+
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <!-- ngx-bootstrap component -->
+        <rating
+          class="fa fontsize-3-half"
+          stateOn="fa-star mdl-color-text--amber"
+          stateOff="fa-star-o"
+          [(ngModel)]="rate"
+          [max]="max"
+          [readonly]="isReadonly"
+          (onHover)="hoveringOver($event)"
+          (onLeave)="resetStar()"
+          [titles]="['one','two','three']"></rating>
+    </div>
+
+    <div class="mdl-color--bluegrey m-2">
+        <p>(<i>Your Rating:</i> {{rate}})</p>
+    </div>
+
+  </div>

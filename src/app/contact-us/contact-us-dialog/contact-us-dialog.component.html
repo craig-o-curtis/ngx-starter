@@ -1,0 +1,22 @@
+<div class="orangelime-app-theme" fxFlex="100%" >
+  <h1 md-dialog-title>Contact Us</h1>
+  <div md-dialog-content>What would you like to say?</div>
+  <div class="mt-3">
+      <md-input-container color="primary" class="h-min-30 vw-min-50">
+        <textarea color="primary" class="h-min-30" mdInput placeholder="Comments"></textarea>
+      </md-input-container>
+  </div>
+
+  <div md-dialog-actions fxLayout="row" fxLayoutAlign="space-between center">
+    <!-- Cancel -->
+    <button md-button md-raised-button color="accent" (tap)="dialogRef.close('Option 1')">
+        <md-icon>cancel</md-icon>
+        Cancel
+    </button>
+    <!-- Send -->
+    <button md-button md-raised-button color="primary" (tap)="dialogRef.close('Option 2')">
+      <md-icon>send</md-icon>
+        Send
+    </button>
+  </div>
+</div>

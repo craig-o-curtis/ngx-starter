@@ -1,0 +1,105 @@
+
+
+.fx-row-space-around-center {
+    height: 100%;
+    box-sizing: border-box;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    -webkit-box-align: center;
+}
+
+.fx-column-center-center {
+    height: 100%;
+    box-sizing: border-box;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+
+
+// // flex builder mixin
+// // // $display: flex, inline-flex
+// // // $direction: row, row-reverse, column, column-reverse
+// // // $wrap: wrap, nowrap
+// // // $justifycontent: flex-start, flex-end, center, space-between, space-around
+
+// @mixin flexbuild($display, $direction ,$wrap:"" ,$justifycontent:"",$alignitems:"",$aligncontent:"") {
+//     display: -ms-#{$display}box;
+//     display: -webkit-#{$display};
+//     display: #{$display};
+
+//     -webkit-flex-direction: $direction;
+//     -ms-flex-direction: $direction;
+//     flex-direction: $direction;
+
+//     -webkit-flex-wrap: $wrap;
+//     -ms-flex-wrap: $wrap;
+//     flex-wrap: $wrap;
+
+//     -webkit-justify-content: flex-#{$justifycontent};
+//     -ms-flex-pack: #{$justifycontent};
+//     justify-content: flex-#{$justifycontent};
+
+//     -webkit-align-content: stretch;
+//     -ms-flex-line-pack: stretch;
+//     align-content: stretch;
+// }
+
+// .flex-rows {
+//   @include flexbuild(flex,row);
+//   &-wrap {
+//     @extend &;
+//     @include flexbuild(flex,row,wrap);
+//   }
+//   &-nowrap {
+//     @extend &;
+//     @include flexbuild(flex,row,nowrap);
+//   }
+// }
+// .flex-row-reverse {
+//   @include flexbuild(flex,row);
+//   &-wrap {
+//     @extend &;
+//     @include flexbuild(flex,row,wrap);
+//   }
+//   &-nowrap {
+//     @extend &;
+//     @include flexbuild(flex,row,nowrap);
+//   }
+// }
+// .flex-column {
+//   @include flexbuild(flex,column);
+//   &-wrap {
+//     @extend &;
+//     @include flexbuild(flex,row,wrap);
+//   }
+//   &-nowrap {
+//     @extend &;
+//     @include flexbuild(flex,row,nowrap);
+//   }
+// }
+// .flex-column-reverse {
+//   @include flexbuild(flex,column);
+//   &-wrap {
+//     @extend &;
+//     @include flexbuild(flex,row,wrap);
+//   }
+//   &-nowrap {
+//     @extend &;
+//     @include flexbuild(flex,row,nowrap);
+//   }
+// }

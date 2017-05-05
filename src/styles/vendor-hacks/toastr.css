@@ -1,0 +1,7 @@
+/* toastr hack */
+/* hackneed - amateurish flex styling on part of toastr team */
+.toast {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}

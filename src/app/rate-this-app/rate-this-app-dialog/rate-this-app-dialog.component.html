@@ -1,0 +1,21 @@
+<div class="orangelime-app-theme animated">
+    <h1 md-dialog-title>Rate this App</h1>
+
+    <div md-dialog-content>
+        <p md-dialog-subtitle>How would you Rate this App?</p>
+        <app-stars></app-stars>
+    </div>
+
+    <div md-dialog-actions fxLayout="row" fxLayoutAlign="space-between center" >
+        <!-- Cancel -->
+        <button md-button md-raised-button color="accent" (tap)="dialogRef.close('Option 1')">
+            <md-icon class="mdl-color-text--red">cancel</md-icon>
+            Cancel
+        </button>
+        <!-- Send -->
+        <button md-button md-raised-button color="primary" (tap)="dialogRef.close('Option 2')">
+          <md-icon class="mdl-color-text--amber">check</md-icon>
+            Confirm
+        </button>
+    </div>
+</div>

@@ -1,0 +1,138 @@
+/*******************************************
+___  ____    _  _ ____ ___    ___  ____ _    ____ ___ ____
+|  \ |  |    |\ | |  |  |     |  \ |___ |    |___  |  |___
+|__/ |__|    | \| |__|  |     |__/ |___ |___ |___  |  |___
+http://beautifytools.com/scss-compiler.php
+*******************************************/
+
+// @mixin bottom-box($color) {
+//   box-shadow: -1px 5px 5px -4px $color;
+// }
+
+// .box-b- {
+//   &-lime-green {
+//     @include bottom-box($mdl-lime-green)
+//   }
+//   &-lime {
+//     @include bottom-box($mdl-lime)
+//   }
+//   &-yellow {
+//     @include bottom-box($mdl-lime)
+//   }
+//   &-amber {
+//     @include bottom-box($mdl-amber)
+//   }
+//   &-orange {
+//     @include bottom-box($mdl-orange)
+//   }
+//   &-brown {
+//     @include bottom-box($mdl-brown)
+//   }
+//   &-light-blue {
+//     @include bottom-box($mdl-light-blue)
+//   }
+//   &-blue {
+//     @include bottom-box($mdl-blue)
+//   }
+//   &-blue-grey {
+//     @include bottom-box($mdl-blue-grey)
+//   }
+//   &-blue-grey-900 {
+//     @include bottom-box($mdl-blue-grey-900)
+//   }
+//   &-grey {
+//     @include bottom-box($mdl-grey)
+//   }
+//   &-deep-orange {
+//     @include bottom-box($mdl-deep-orange)
+//   }
+//   &-red {
+//     @include bottom-box($mdl-red)
+//   }
+//   &-pink {
+//     @include bottom-box($mdl-pink)
+//   }
+//   &-purple {
+//     @include bottom-box($mdl-purple)
+//   }
+//   &-deep-purple {
+//     @include bottom-box($mdl-deep-purple)
+//   }
+//   &-black {
+//     @include bottom-box($mdl-black)
+//   }
+//   &-white {
+//     @include bottom-box($mdl-white)
+//   }
+// }
+.box-b--lime-green {
+	box-shadow: -1px 5px 5px -4px #8bc34a;
+}
+
+.box-b--lime {
+	box-shadow: -1px 5px 5px -4px #cddc39;
+}
+
+.box-b--yellow {
+	box-shadow: -1px 5px 5px -4px #cddc39;
+}
+
+.box-b--amber {
+	box-shadow: -1px 5px 5px -4px #ffc107;
+}
+
+.box-b--orange {
+	box-shadow: -1px 5px 5px -4px #ff9800;
+}
+
+.box-b--brown {
+	box-shadow: -1px 5px 5px -4px #795548;
+}
+
+.box-b--light-blue {
+	box-shadow: -1px 5px 5px -4px #03a9f4;
+}
+
+.box-b--blue {
+	box-shadow: -1px 5px 5px -4px #2196f3;
+}
+
+.box-b--blue-grey {
+	box-shadow: -1px 5px 5px -4px #607d8b;
+}
+
+.box-b--blue-grey-900 {
+	box-shadow: -1px 5px 5px -4px #212121;
+}
+
+.box-b--grey {
+	box-shadow: -1px 5px 5px -4px #9e9e9e;
+}
+
+.box-b--deep-orange {
+	box-shadow: -1px 5px 5px -4px #ff5722;
+}
+
+.box-b--red {
+	box-shadow: -1px 5px 5px -4px #f44336;
+}
+
+.box-b--pink {
+	box-shadow: -1px 5px 5px -4px #e91e63;
+}
+
+.box-b--purple {
+	box-shadow: -1px 5px 5px -4px #9c27b0;
+}
+
+.box-b--deep-purple {
+	box-shadow: -1px 5px 5px -4px #673ab7;
+}
+
+.box-b--black {
+	box-shadow: -1px 5px 5px -4px black;
+}
+
+.box-b--white {
+	box-shadow: -1px 5px 5px -4px white;
+}
